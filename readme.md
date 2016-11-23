@@ -1,27 +1,31 @@
-# Laravel PHP Framework
+## Con el fin de iniciar se deben realizar los siguientes pasos
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Crear el archivo .env en raiz del proyecto y agregar valores a los campos de acurdo a los criterios de tu sistema
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+DB_USERNAME
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+DB_PASSWORD
 
-## Official Documentation
+DEFAULT_USER_NAME
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+DEFAULT_USER_EMAIL
 
-## Contributing
+DEFAULT_USER_PASSWORD
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+En la raiz del proyecto ejecutar los comandos
 
-## Security Vulnerabilities
+    2.1 php artisan migrate # Creara la base de datos segun los parametros listados en el archivo .env
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+    2.2 php artisan db:seed # Crearar los datos de prueba
 
-## License
+    2.3 php artisan serve # Ejecutara el servidor
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+    2.4 php artisan route:list # listara los endpoints
+
+
+El endpoint raiz lista todos los datos de prueba y se accede atravez de
+
+    3.1 loclahost:8000/api
+
+Ahi se pueden tomar los datos para realizar consultas a los demas endpoints como se listan
+en en el punto 2.4
